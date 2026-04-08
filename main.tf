@@ -8,7 +8,7 @@ terraform {
 
 
 resource "aws_security_group" "mysg" {
-name = "tom-sg"
+name = "tom-sg-new"
 
 ingress {
     from_port        = 80
