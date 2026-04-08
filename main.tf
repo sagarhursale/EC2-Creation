@@ -1,6 +1,6 @@
 terraform {
   backend "s3" {
-    bucket = "amzones"
+    bucket = "devops-qoiaakvs"
     key    = "ec2/terraform.tfstate"
     region = "ap-south-1"
   }
@@ -33,11 +33,9 @@ resource "random_string" "mtstring" {
 }
 
 resource "aws_instance" "myinstance" {
+
   ami           = var.myami
   instance_type = var.myinstance
-    lifecycle {
-    create_before_destroy = true
-  }
   security_groups = [aws_security_group.mysg.name]
   user_data     = <<-EOF
               #!/bin/bash
