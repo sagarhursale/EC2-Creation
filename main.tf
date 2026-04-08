@@ -1,3 +1,13 @@
+terraform {
+  backend "s3" {
+    bucket         = "sagarhursale-bucket"
+    key            = "ec2-project/terraform.tfstate"
+    region         = "ap-south-1"
+    dynamodb_table = "terraform-lock"
+  }
+}
+
+
 resource "aws_security_group" "mysg" {
 name = "tom-sg"
 
