@@ -41,7 +41,7 @@ resource "aws_instance" "myinstance" {
               #!/bin/bash
               yum update -y
               yum install nginx -y
-              echo "<html><body><h1>Welcome to Devops</h1></body></html>" > /var/www/html/index.html
+              echo "<html><body><h1>Welcome to Github Actions</h1></body></html>" > /var/www/html/index.html
               systemctl start nginx
               systemctl enable nginx
               EOF
