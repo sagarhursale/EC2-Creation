@@ -1,6 +1,6 @@
 terraform {
   backend "s3" {
-    bucket         = "sagarhursale-bucket"
+    bucket         = "amz-sagar"
     key            = "ec2-sagar/terraform.tfstate"
     region         = "ap-south-1"
   }
